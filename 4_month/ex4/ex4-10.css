@@ -1,0 +1,10 @@
+/* div 자손 요소 중 p 요소*/
+div p{
+    color:blue;
+    font-size: 1.25rem
+}
+
+
+.parent>span+h4{
+    color:red
+}

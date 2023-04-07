@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8. 형제 위치 기반 요소 선택하기:nth-of-type() </title>
+
+    <style>
+        body {
+            background: black;
+            color: white;
+        }
+
+        /* even : 짝수, odd : 짝수 */
+        /*
+
+        p:nth-of-type(2){
+            color:coral
+        }
+*/
+
+        p:nth-child(3n-1) {
+            color: cadetblue
+        }
+    </style>
+</head>
+
+<body>
+    <div>여기는 카운터 세는 곳이 아님!</div>
+    <p>1 번째 p 태그</p>
+    <p>2 번째 p 태그</p>
+    <div>여기는 카운터 세는 곳이 아님!</div>
+    <p>3 번째 p 태그</p>
+    <p>4 번째 p 태그</p>
+    <p>5 번째 p 태그</p>
+    <p>6 번째 p 태그</p>
+    <p>7 번째 p 태그</p>
+    <p>8 번째 p 태그</p>
+    <p>9 번째 p 태그</p>
+
+</body></html>

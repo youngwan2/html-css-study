@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7. 형제 중 마지막 요소 선택하기:last-child</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+        }
+
+        /* 마지막 자식 요소를 제외하고 css 를 적용한다. */
+
+        p:not(:last-child) {
+            color: blue;
+            background: white;
+        }
+
+        /*
+        p:first-child {
+            color: orangered;
+            padding: 10px;
+            border: 1px solid #edfe39
+        }
+*/
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>:last-child 가 아닙니다..</p>
+        <p>:last-child 가 아닙니다.</p>
+        <p>:last-child 입니다.</p>
+    </div>
+    <div>
+        <p>:last-child 가 아닙니다..</p>
+        <p>:last-child 가 아닙니다.</p>
+        <p>:last-child 입니다.</p>
+    </div>
+</body></html>

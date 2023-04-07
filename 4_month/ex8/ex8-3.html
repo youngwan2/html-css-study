@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.비활성화하기 :disabled</title>
+
+    <style>
+        /*        비활성화된 요소를 꾸며주는 역할임.*/
+        input:disabled {
+            color: lightcoral;
+            background: black;
+            height: 40px;
+        }
+
+        button:disabled {
+            background: black;
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+    <!--a 태그는 disabled 가 안 된다-->
+    <a href="http://www.google.com">구글링크</a>
+    <input type="button" value="확인" disabled>
+    <input type="submit" value="Submit" disabled>
+    <button disabled>확인버튼</button>
+
+</body></html>

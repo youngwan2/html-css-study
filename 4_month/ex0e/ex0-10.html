@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0
+        }
+
+        body {
+            background: black;
+        }
+
+        /*--------머릿말*/
+        header {
+            height: 50px;
+            width: 100%;
+
+            background-color: #378
+        }
+
+        /*--------메뉴*/
+        nav {
+            height: 50px;
+            width: 100%;
+
+            background-color: gold
+        }
+
+        /*----------메인 영역*/
+        main {
+            width: 100%;
+            height: 680px;
+
+            display: flex;
+        }
+
+        /*옆면*/
+        main aside {
+            width: 200px;
+            height: 100%;
+
+            background: tomato
+        }
+
+        main aside:hover {
+            background: yellowgreen;
+        }
+
+        /*콘텐츠 영역*/
+        main section {
+            width: 100%;
+            height: 100%;
+            min-width: 500px;
+
+        }
+
+        /*----------밑바닥*/
+        footer {
+            height: 50px;
+            width: 100%;
+            border: 1px solid white;
+            background-color: yellowgreen
+        }
+
+        footer:hover {
+            background: tomato;
+        }
+
+
+        /*      -------------  콘텐츠 세부 영역---- */
+        .content_container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            max-width: 480px;
+            height: 90%;
+            align-items: center;
+        }
+
+        /*        콘텐츠 박스 영역*/
+        .content_box {
+            width: 100%;
+            min-width: 100px;
+            max-width: 230px;
+            margin: 5px auto;
+            height: 50%;
+            background: white;
+        }
+
+        .content_box:hover {
+            border: 1px solid gray;
+        }
+
+        .content_box .image {
+            height: 70%;
+            background-image: url('../../img/caffee.jpg');
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        .content_box .title {
+            height: 30%;
+            color: black;
+            background: tomato;
+            background-color: rgba(255, 255, 255, 0.144)
+        }
+
+        .content_box .title:hover {
+            background-color: rgba(0, 0, 0, 0.265);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <aside></aside>
+        <section>
+            <h1>flex로 구현</h1>
+            <div class="content_container">
+                <div class="content_box">
+                    <div class="image"></div>
+                    <p class="title">title1</p>
+                </div>
+                <div class="content_box">
+                    <div class="image"></div>
+                    <p class="title">title2</p>
+                </div>
+                <div class="content_box">
+                    <div class="image"></div>
+                    <p class="title">title3</p>
+                </div>
+                <div class="content_box">
+                    <div class="image"></div>
+                    <p class="title">title4</p>
+                </div>
+
+            </div>
+        </section>
+        <aside></aside>
+    </main>
+    <footer></footer>
+
+</body></html>

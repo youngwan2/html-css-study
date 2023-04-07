@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background: gray;
+            border-radius: 10px;
+            border: 5px ridge white;
+            display: flex;
+        }
+
+
+        /*박스 공통*/
+        .box {
+            margin: 5px;
+            border-radius: 10px;
+            font-size: 13.8px;
+            padding: 10px;
+            width: 140px;
+            border: 3px ridge;
+            height: 105px;
+            color: white;
+            position: absolute;
+
+        }
+
+        /*빨간 박스*/
+        .box1 {
+            background: red;
+            font-weight: 600;
+        }
+
+        /* 녹색 박스*/
+        .box2 {
+            top: 59px;
+            left: 58px;
+            opacity: 0.5;
+            font-weight: 600;
+            font-size: 13.8px;
+            z-index: 2;
+            background-color: green;
+
+        }
+
+        /*  파란색 박스*/
+        .box3 {
+            top: 173px;
+            font-weight: 600;
+            left: 40px;
+            background: cornflowerblue;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box1 box">
+            박스의 크기와 위치를 잘 살펴보아야 합니다.
+
+        </div>
+        <div class="box2 box">
+            박스의 포지션 속성을 바꿔가며 테스트해 보아야 합니다.
+        </div>
+        <div class="box3 box">
+            포지션을 이해하기 위해서는 시험해보고 관찰해 보는 것이 절대적으로 필요합니다.
+
+        </div>
+    </div>
+    <br><br>
+    <hr>
+    <footer style="border: 2px solid white; border-radius: 10px; height: 50px; text-align: center; background: #244">
+
+        <a style="color:white; text-decoration: none; padding:20px; line-height: 3" href="./ex0-0.html">목차로 가기</a>
+    </footer>
+
+</body></html>

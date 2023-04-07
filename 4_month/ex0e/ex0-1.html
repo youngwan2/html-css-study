@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.flex 시멘틱 웹 레이아웃 복습</title>
+
+    <style>
+        * {
+            margin: 0;
+            text-decoration: none
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        li {
+            list-style: none;
+            margin: 10px;
+        }
+
+        .container {
+            width: 100%;
+            position: fixed;
+            margin-top: 3rem;
+
+        }
+
+        /*header*/
+        .header {
+            background-color: bisque;
+            width: auto;
+            flex: 1;
+            text-align: center;
+            line-height: 3;
+            border: 1px solid black
+        }
+
+        /*nav*/
+        .nav {
+            background-color: greenyellow;
+            width: auto;
+            flex: 1;
+            text-align: center;
+            height: 50px;
+            border: 1px solid black
+        }
+
+        /*        main*/
+        .main {
+            background-color: springgreen;
+            width: auto;
+            display: flex;
+            flex: 1;
+            border: 1px solid black
+        }
+
+        .content {
+            background-color: aqua;
+            width: 100%;
+            text-align: center;
+            border: 1px solid black
+        }
+
+        .content>.table {
+            border-collapse: collapse;
+            margin-top: 5rem;
+            width: 80%;
+            position: relative;
+            left: 10%;
+            border: 3px solid white;
+        }
+
+        .table tr {
+            background: black;
+            opacity: 0.9;
+            color: white;
+            height: 30px;
+        }
+
+        /*테이블 컬럼*/
+        .table th {
+            background-color: darkgoldenrod;
+            height: 40px;
+        }
+
+        /*테이블 행*/
+        .table tr:nth-of-type(2n+1) {
+            background-color: sandybrown;
+            opacity: 0.8;
+            font-weight: 600;
+
+        }
+
+        .table>tr>td {
+            padding: 6px
+        }
+
+        .content:active {
+            color: ;
+        }
+
+        /*        기타 */
+        .aside {
+
+            background-color: azure;
+            width: 40%;
+            max-width: 300px;
+            text-align: center;
+            line-height: 30;
+            border: 1px solid black
+        }
+
+        /*        footer*/
+
+        footer {
+            background-color: teal;
+            color: white;
+            width: auto;
+            flex: 1;
+            text-align: center;
+            line-height: 6;
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">header</header>
+        <nav class="nav">
+            <ul>
+                <li> <a href="http://www.naver.com">네이버</a></li>
+
+                <li> <a href="http://www.daum.net">다음</a></li>
+
+                <li> <a href="http://www.google.com">구글</a></li>
+
+                <li> <a href="htt://www.">링크1</a></li>
+
+                <li> <a href=""></a>링크2</li>
+
+            </ul>
+
+
+        </nav>
+        <main class="main">
+            <div class="content">
+                <table class="content table">
+                    <tr>
+                        <th>h1</th>
+                        <th>h2</th>
+                        <th>h3</th>
+                        <th>h4</th>
+                        <th>h5</th>
+                    </tr>
+                    <tr>
+                        <td>내용1</td>
+                        <td>내용2</td>
+                        <td>내용3</td>
+                        <td>내용4</td>
+                        <td>내용5</td>
+                    </tr>
+                    <tr>
+                        <td>내용1</td>
+                        <td>내용2</td>
+                        <td>내용3</td>
+                        <td>내용4</td>
+                        <td>내용5</td>
+                    </tr>
+                    <tr>
+                        <td>내용1</td>
+                        <td>내용2</td>
+                        <td>내용3</td>
+                        <td>내용4</td>
+                        <td>내용5</td>
+                    </tr>
+                    <tr>
+                        <td>내용1</td>
+                        <td>내용2</td>
+                        <td>내용3</td>
+                        <td>내용4</td>
+                        <td>내용5</td>
+                    </tr>
+                    <tr>
+                        <td>내용1</td>
+                        <td>내용2</td>
+                        <td>내용3</td>
+                        <td>내용4</td>
+                        <td>내용5</td>
+                    </tr>
+                    <tr>
+                        <td>내용1</td>
+                        <td>내용2</td>
+                        <td>내용3</td>
+                        <td>내용4</td>
+                        <td>내용5</td>
+                    </tr>
+                    <tr>
+                        <td>내용1</td>
+                        <td>내용2</td>
+                        <td>내용3</td>
+                        <td>내용4</td>
+                        <td>내용5</td>
+                    </tr>
+                    <tr>
+                        <td>내용1</td>
+                        <td>내용2</td>
+                        <td>내용3</td>
+                        <td>내용4</td>
+                        <td>내용5</td>
+                    </tr>
+                    <tr>
+                        <td>내용1</td>
+                        <td>내용2</td>
+                        <td>내용3</td>
+                        <td>내용4</td>
+                        <td>내용5</td>
+                    </tr>
+
+
+                </table>
+            </div>
+            <aside class="aside">aside</aside>
+        </main>
+
+        <footer class="footer">footer</footer>
+    </div>
+
+
+
+    <br><br>
+    <hr>
+    <h2>* 시멘틱 웹 참고 이미지</h2>
+    <div style="text-align: center">
+        <img src="../../img/%EC%8B%9C%EB%A9%98%ED%8B%B1.jpg" alt="시멘틱 레이아웃">
+        <img src="../../img/%EC%8B%9C%EB%A9%98%ED%8B%B1%EC%84%A4%EB%AA%85.jpg" alt="시멘틱 웹 설명">
+    </div>
+
+    <br>
+    <hr>
+    <h2>* 메모</h2>
+    <p><strong>flex </strong>: 축약형(glow:늘어뜨림, shrink, basis)</p>
+    <p><strong>flex-grow</strong>:늘린다.</p>
+    <p><strong>flex-shrink</strong>: flex 아이템의 크기가 flex 컨테이너의 크기 보다 클 경우 아이템이 얼마나 축소되어야 하는지 지정한다. 2로 지정하면 초과하는 크기의 2배를 줄인다는 의미이다.</p>
+    <p><strong>flex-basis</strong>: flex 아이템의 초기 크기를 지정할 때 사용한다. 200px 로 지정하면 아이템 초기 크기가 200px로 시작한다.</p>
+            <br><br>
+    <hr>
+    <footer style="border: 2px solid white; border-radius: 10px; height: 50px; text-align: center; background: #244; z-index: 100">
+
+        <a style="color:white; text-decoration: none; padding:20px; line-height: 3" href="./ex0-0.html">목차로 가기</a>
+    </footer>
+
+
+</body></html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>6. 속성선택자</title>
+
+    <style>
+        h3[class] {
+            color: blue
+        }
+
+        /*        class 속성의 값으로 단독으로 icox 를 포함하는 태그를 선택한다.*/
+        p[class~="icox"] {
+            color: blue;
+        }
+
+        /*        class의 속성값이 icox 로 시작하는 태그를 선택한다.*/
+        p[class^="icox"] {
+            color: red
+        }
+
+        /*        class의 속성값이 icox로 끝나는 태그를 선택한다.*/
+        p[class$='icox'] {
+            color: green
+        }
+
+        /*        class의 속성값에 icox 가 포함되는 모든 태그를 선택한다.*/
+        p[class*="icox"] {
+            color: aqua
+        }
+
+        p[class|="icox"] {
+            color: darkgreen
+        }
+    </style>
+</head>
+
+<body>
+    <h3 class="logo">서울특별시</h3>
+    <h3>경기도</h3>
+    <p class="icox">주소록을 작성합니다.</p>
+    <p class="icoxpage">전화번호부를 작성합니다.</p>
+    <p class="screenicox">건강기록부를 작성합니다.</p>
+    <p class="I icox U">금전출납부를 작성합니다.</p>
+    <p class="icox-1">손익계산서를 작성합니다.</p>
+
+
+    <br>
+    <br>
+    <hr>
+    <h3>* 메모</h3>
+    <p><strong>and( & )</strong>: 동시에 일어날 것인가</p>
+    <p><strong>or( | )</strong>: 둘 중 하나만 일어날 것인가 </p>
+    <p><strong>태그:not(.클래스명 or #아이디명)</strong>: 해당 태그의 클래스나 아이디명을 제외하고 적용한다.</p>
+    <p><strong>[not] ~=</strong>: 속성 선택자 중에 공백으로 구분된 하나의 단어를 포함할 때</p>
+
+
+    <br>
+    <hr>
+    <a href="./ex0d.html">목차로 돌아가기</a>
+
+</body></html>

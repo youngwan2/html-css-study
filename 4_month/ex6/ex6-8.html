@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>8.플렉스 축 방향 바꾸기(flex-direction:column)</title>
+
+    <style>
+        .container {
+            display: flex;
+            /*            주축*/
+            justify-content: flex-end;
+            width: 100%;
+            flex-direction: column;
+            /*            교차축*/
+            align-items: flex-end;
+        }
+
+        .container>div {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            /*            margin: 10px*/
+        }
+
+        #second {
+            background-color: seagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>8.플렉스 축 방향 바꾸기: flex-direction2</h1>
+    <div class="container">
+        <div></div>
+        <div id="second"></div>
+        <div></div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <hr>
+    <h3>* 메모</h3>
+    <p>- <strong>flex-direction</strong> </p>
+    <ul>
+        <li><strong>column</strong> : 플렉스 주축을 세로축으로 바꾼다.</li>
+
+    </ul>
+    <p><strong></strong></p>
+    <br>
+    <hr>
+    <a href="./ex6-0.html">목차로 돌아가기</a>
+
+</body></html>

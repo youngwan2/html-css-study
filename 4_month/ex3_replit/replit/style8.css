@@ -1,0 +1,40 @@
+body{
+  background-repeat:no-repeat;
+  background-position: center;
+  background-size: 400px 400px ;
+  color:white;
+}
+
+h1{
+  border-bottom: 1px solid white;
+  padding:10px ;
+  color:white;
+}
+
+span {
+  padding: 5px 
+}
+
+
+        @media (max-width:1200px) {
+          h1{
+            color:white;
+          }
+            body { 
+                background-color: pink;
+              color:whit;
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM9wSHtc8WCY-dVjMOex3VPMUsSryczy_RaA&usqp=CAU')
+                
+            }
+        }
+
+        @media (min-width:600px) {
+          h1,span{+
+            color:white;
+          }
+            body {
+                background-color: deeppink;
+                background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5u9mxC3nZcrmLgoESgnm-oMMF3xJkHpUzfA&usqp=CAU')
+            }
+
+        }

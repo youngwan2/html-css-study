@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>정규식(정규표현식)</title>
+</head>
+
+<body>
+    <h1>ex1-8: form 과 button 태그</h1>
+    <hr>
+
+    <form action="myform.html" name="ok1">
+        <h3>form1 태그</h3>
+        <lable for="fname"> <strong>First name : </strong></lable>
+        <input type="text" id="fname" required pattern="">
+        <br>
+        <label for="lname"> <strong>Last name : </strong></label>
+        <input type="text" id="lname" required> <br>
+        <button type="submit">제출버튼 </button>
+        <button type=reset>리셋버튼 </button>
+    </form>
+    <br>
+    <hr>
+    <h2>* 메모</h2>
+    <h3>1) 정규표현식</h3>
+    <p>- <strong>[0-3]</strong> : 0에서 3까지 하나 이상 </p>
+    <p>- <strong>[0-35-9]</strong> : 4를 제외한 숫자범위0에서 3까지, 5에서 9까지 중 하나 </p>
+    <p>- <strong>^</strong> : 맨 앞의 글자 -> 문자열의 시작</p>
+    <p>- <strong> $</strong> : 맨 뒤의 글자 -> 문자열의 끝</p>
+    <p>- <strong> ^(안)[0-9] </strong> : 안으로 무조건 시작하고 0-9 사이 숫자 하나 </p>
+    <p>- <strong> . </strong> : 어떤 글자든 1개 이상 들어가야 함</p>
+    <p>- <strong>[a-zA-Z] </strong> : a-z, A-Z 문자열 1개 </p>
+    <p>- <strong>[가-힣] : </strong> 한글 아무거나 1개 </p>
+    <p>- <strong>[가-힣]{3} : </strong> 한글 아무거나 3개 </p>
+    <p>- <strong>[가-힣]{2,4} : </strong> 한글 아무거나 2개~4개 </p>
+    <p>- <strong>[a-z]{2,5}@[a-z]{2,5}(.)[a-z] : </strong> 소문자 a-z 까지 2글자 이상 5글자 미만, @을 포함하고, a-z 까지 2글자 이상 5글자 미만으로 . </p>
+    <br>
+    <hr>
+    <h3>2) 전화번호</h3>
+    <p>- <strong>\d :</strong> =[0-9]과 같다</p>
+    <p>- <strong>\d{3}-\d{4}-\d{4}</strong> : 숫자 000-0000-0000</p>
+    <p>- <strong>\d{3}-\d{3,4}-\d{4}</strong> : 숫자 000-000(0000)-0000</p>
+    <p>- <strong>01[06-9]-\d{3,4}-\d{4} :</strong>숫자 01(06~9) -000~0000 - 0000 </p>
+    <p><strong>01[06-9]\d{3,4}\d{4} 혹은 d{3,8} :</strong> -을 제외하고 전화번호 표기 </p>
+
+    <br>
+    <hr>
+    <h3>3) + 와 * 과 . </h3>
+    <p>- <strong>ac+b</strong> : c가 1개 이상 포함되어야 한다. </p>
+    <p>- <strong>ac*b</strong> : c가 0개 이상 포함되어야 한다.(있어도 그만 없어도 그만) </p>
+    <p>- <strong>\.</strong> : 진짜 .</p>
+
+    <br>
+    <br>
+    <hr>
+    <a href="./ex0.html">목차로 돌아가기</a>
+
+</body></html>

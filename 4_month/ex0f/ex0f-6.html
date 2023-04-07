@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --mycolor1: #084a90;
+            --mycolor2: #3689e2;
+            --mycolor3: #c8ddf3;
+            --mygreen1: #085d0e;
+            --mygreen2: #219626;
+            --mygreen3: #c3e8c6;
+            --myred1: #d41411;
+            --myred2: #e88382;
+            --myred3: #f2c4c3;
+
+
+        }
+
+        .wrap {
+            display: grid;
+            grid-template-columns: 1fr 2ft 1ft;
+            grid-template-rows: 200px 200px 200px;
+            grid-gap: 10px;
+
+        }
+
+        .wrap>div {
+            border: 1px solid black;
+            box-shadow: 1px 1px 5px black;
+            border-radius: 5px;
+            transition: 1s;
+        }
+        
+        .wrap>div:hover{
+            background: white;
+        }
+
+        .grid1 {
+            background: var(--mycolor1);
+            grid-column-start: 1;
+            grid-column-end: 3
+        }
+
+        .grid2 {
+            background: var(--mycolor2);
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+
+        .grid3 {
+            background: var(--mygreen1);
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .grid4 {
+            background: var(--mygreen2);
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        .grid5 {
+            background: var(--myred1)
+        }
+
+        .grid6 {
+            background: var(--myred2)
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1. 그리드(Grid)</h1>
+    <hr>
+
+    <div class="wrap">
+        <div class="grid1">GRID1</div>
+        <div class="grid2">GRID2</div>
+        <div class="grid3">GRID3</div>
+        <div class="grid4">GRID4</div>
+        <div class="grid5">GRID5</div>
+        <div class="grid6">GRID6</div>
+    </div>
+
+</body></html>

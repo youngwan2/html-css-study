@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.float 응용:레이아웃 만들기(float의 특징)</title>
+
+    <style>
+        .ex-layout {
+            height: 100%;
+            width: 500px;
+            text-align: center;
+
+        }
+
+        .menu {
+            height: 400px;
+            border: 2px solid #09c;
+            color: white;
+            background-color: #222;
+            line-height: 24;
+            border-radius: 20px;
+
+
+        }
+
+        .main .left-menu {
+            float: left;
+            width: 5tpx;
+            height: 200px;
+            border: 2px solid blue;
+            background: #555;
+
+            color: white;
+            line-height: 13;
+            border-radius: 20px;
+
+        }
+
+        .main.content {
+            float: left;
+            width: 200px;
+            height: 25px;
+        }
+
+        .article {
+            height: 200px;
+            border: 2px solid blue;
+            background: burlywood;
+            line-height: 12;
+            border-radius: 20px;
+
+        }
+
+        .comment {
+            height: 50px;
+            border: 2px solid purple;
+            background: #3338;
+            line-height: 3;
+            border-radius: 20px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="ex-layout">
+        <div class="menu">global menu</div>
+        <div class="main">
+            <div class="left-menu">left menu</div>
+            <div class="content">
+                <div class="content">
+                    <div class="article">article</div>
+                    <div class="comment">comment</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <hr>
+    <footer style="border: 2px solid white; border-radius: 10px; height: 50px; text-align: center; background: #244">
+
+        <a style="color:white; text-decoration: none; padding:20px; line-height: 3" href="./ex0-0.html">목차로 가기</a>
+    </footer>
+</body></html>

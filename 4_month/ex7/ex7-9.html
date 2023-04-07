@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9.position: absolute(형제의 앱솔루트 만들기)</title>
+    <!--    스타일-->
+    <style>
+        /*        형제요소*/
+
+        .container {
+            position: relative;
+            height: 100%;
+            width: 100%
+        }
+
+        .up {
+            background-color: indigo;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .down {
+            background-color: deeppink;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 20px;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>9.position: absolute(형제의 앱솔루트 만들기)</h1>
+    <hr>
+    <!--   본문-->
+    <div class="container">
+        <h3>형제관계 일 때</h3>
+        <div class="up"></div>
+        <div class="down"></div>
+    </div>
+
+    <!--    메모-->
+
+    <!--   목차-->
+    <br>
+    <br>
+    <hr>
+    <a href="./ex7-0.html">목차로 돌아가기</a>
+
+</body></html>

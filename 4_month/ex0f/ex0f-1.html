@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            background: black;
+            color: white;
+        }
+
+        p::before {
+            content: "★"
+        }
+
+        p:first-child {
+            color: olivedrab;
+            font-weight: 700;
+            font-style: oblique
+        }
+
+        p:first-child:after {
+            content: "";
+            border-bottom: 4px solid gold;
+            border-radius: 10px;
+            width: 0%;
+            max-width: 87px;
+            color: green;
+            position: absolute;
+            left: 8;
+            top: 30px;
+        }
+
+        p:first-child:hover:after {
+            /*            content: "____";*/
+            position: absolute;
+            left: 10px;
+            width: 11%;
+            top: 40px;
+            color: red;
+        }
+
+        p:nth-child(2) {
+            color: brown;
+            background-color: yellow;
+        }
+
+        p:nth-of-type(3)::before {
+            content: "☆☆☆☆"
+        }
+
+
+        p:nth-last-child(2):after {
+            content: " 메로나★"
+        }
+
+        p:nth-last-child(1):after {
+            content: ". 감사합니다.~ ★"
+        }
+    </style>
+</head>
+
+<body>
+    <span>
+        <p>나의 사랑</p>
+        <p>나의 가족</p>
+        <p>행복 미래</p>
+        <p>올 때</p>
+        <p>이제 끝</p>
+    </span>
+
+</body></html>

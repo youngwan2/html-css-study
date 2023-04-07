@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+
+            min-width: 540px;
+            height: 40px;
+            border-bottom: 1px solid #4555;
+            box-shadow: 1px 17px 11px 6px black;
+        }
+
+        li {
+            line-height: 2.3;
+            list-style: none;
+            float: left;
+            padding: 0 15px;
+
+        }
+
+        li:after {
+            content: "|";
+            float: right;
+            margin-right: -7px;
+            color: #ccc;
+        }
+
+        li:nth-last-of-type(1):after {
+            content: ""
+        }
+
+        li:hover {
+            color: tomato;
+            border-bottom: 1px solid black;
+            padding-bottom: 2px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 5px;
+
+        }
+
+        /*        ----------------*/
+        .ex_section {
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>로그인</li>
+        <li>회원가입</li>
+        <li>마이페이지</li>
+        <li>사이트맵</li>
+        <li>고객센터</li>
+    </ul>
+
+    <!--    div.tag{$번째 태그입니다.}*5-->
+    <section class="ex_section">
+        <div class="tag">1번째 태그입니다.</div>
+        <div class="tag">2번째 태그입니다.</div>
+        <div class="tag">3번째 태그입니다.</div>
+        <div class="tag">4번째 태그입니다.</div>
+        <div class="tag">5번째 태그입니다.</div>
+    </section>
+
+    <br>
+    <br>
+    <hr>
+    <h2>* 메모</h2>
+    <p>- <strong>{텍스트$}*3</strong>: 텍스트1 텍스트2 텍스트3과 같이 나온다.</p>
+
+
+</body></html>

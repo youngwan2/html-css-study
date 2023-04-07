@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body {
+            background: black;
+            ;
+        }
+
+        .circle {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            box-shadow:
+                5px 10px 15px range;
+            width: 200px;
+            height: 200px;
+            background: orange;
+            border-radius: 50%;
+            animation: circle 0.8s ease-out infinite alternate;
+        }
+
+
+        @keyframes circle {
+            0% {
+                transform: translateY(500px) scaleY(0.6) scaleX(1.1);
+                background: gold;
+
+            }
+
+
+            100% {
+                transform: scaleY(1);
+                background: ;
+                box-shadow: 1px 1px 50px 1000px white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circle">
+
+    </div>
+
+</body></html>

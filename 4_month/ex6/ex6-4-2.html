@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4-2.플렉스박스(justify-content:flex-end)</title>
+
+    <style>
+        .container {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        .container>div {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            /*            margin: 10px*/
+        }
+
+        #second {
+            background-color: seagreen;
+        }
+
+        ul {
+            background: tomato;
+            color: white;
+        }
+
+        li {
+            list-style: inside
+        }
+    </style>
+</head>
+
+<body>
+    <h1>4-2. 플렉스 박스(justify-content: flex-end )</h1>
+    <div class="container">
+        <div></div>
+        <div id="second"></div>
+        <div></div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <hr>
+    <h3>* 메모</h3>
+    <p>- <strong>태그#아이디명</strong>: 아디가 적힌 태그 생성</p>
+    <p>- <strong>crtl+shift+방향키(↑or↓)</strong>: 코드 자리 옮기기</p>
+    <p><strong>- justify-content</strong>: 주축을 정렬한다.</p>
+    <ul style="border: 1px solid black; padding:10px;">
+        <li><strong>flex-start</strong>: 시작 부분에 정렬</li>
+        <li><strong>flex-end</strong>: 끝에 정렬</li>
+        <li><strong>center</strong>: 중앙정렬</li>
+        <li><strong>space-between</strong>: 요소가 축을 따라 펼쳐짐</li>
+        <li><strong>space-around</strong>: 요소가 축을 따라 펼쳐지지만 가장자리 주변에도 공간이 있음</li>
+    </ul>
+    <p><strong></strong></p>
+    <br>
+    <hr>
+    <a href="./ex6-0.html">목차로 돌아가기</a>
+
+</body></html>

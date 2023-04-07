@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        :root {
+            --myheader: green;
+            --mynav: blue;
+            --myaside: beige;
+            --mysection: powderblue;
+            --myfooter: #fcbd02;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .grid_container {
+            margin: 5px;
+            display: grid;
+            grid-template-columns: 100px100px 100px;
+            grid-template-rows: 50px 50px 678px 50px;
+            grid-gap: 5px;
+
+        }
+
+        .grid_container>div {
+            background: #0a3d8e;
+            color: white;
+            line-height: 3;
+            text-align: center;
+            box-shadow: 2px 2px 5px gray;
+            transition: 1s
+        }
+        
+        .grid_container>div:hover{
+            background: #6795d4
+        }
+
+        /*        헤더*/
+        .grid1 {
+            grid-column-start: 1;
+            grid-column-end: 6;
+
+        }
+
+        /*        메뉴 링크*/
+        .grid2 {
+            grid-column-start: 1;
+            grid-column-end: 6;
+        }
+
+        /*        사이드1*/
+        .grid3 {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            line-height: 50 !important;
+        }
+
+        /*        섹션*/
+        .grid4 {
+            grid-column-start: 2;
+            grid-column-end: 5;
+            line-height: 50 !important;
+        }
+
+        /*        사이드2*/
+        .grid5 {
+            grid-column-start: 5;
+            grid-column-end: 6;
+            line-height: 50 !important;
+        }
+
+        /*        풋터*/
+        .grid6 {
+
+            grid-column-start: 1;
+            grid-column-end: 6;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="grid_container">
+        <div class="grid1">Header</div>
+        <div class="grid2">Nav</div>
+        <div class="grid3">Aside</div>
+        <div class="grid4">Section</div>
+        <div class="grid5">Aside</div>
+        <div class="grid6">Footer</div>
+    </div>
+
+</body></html>
