@@ -1,0 +1,96 @@
+:root {
+    --body-bg: tomato;
+    --hamburger-bg: tomato;
+}
+
+haml,
+body {
+    height: 100vh;
+    background: black;
+}
+
+body {
+
+    /*    background: :var(--body-bg);*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-title {
+    color: white;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+.hamburger-container {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    cursor: pointer;
+    height: 100px;
+    background: var(--hamburger-bg);
+}
+
+.hamburger-container:hover + div {
+    opacity: 1;
+    transform: translateY(20px);
+    color:white;
+/*    transition: 1s;*/
+}
+
+.hamburger-container+div {
+    opacity: 0;
+    transition: 1s;
+    transform: rotateX(120deg) rotateY(240deg) perspective(600px);
+    
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    transition: 0.5s;
+    background: white;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+}
+
+.hamburger {
+    top: 43%;
+
+}
+
+.hamburger::before {
+    top: -30px;
+}
+
+.hamburger::after {
+    top: 30px;
+}
+
+/*형태 변형*/
+.toggle:checked ~ .hamburger::after {
+    top: 0;
+    transform: rotate(225deg);
+}
+
+.toggle:checked ~ .hamburger::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.toggle:checked ~ .hamburger {
+    background: var(--hamburger-bg);
+}
+
+.toggle {
+    opacity: 0;
+
+}
