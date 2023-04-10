@@ -47,6 +47,8 @@
         }
 
         .search_area>input {
+            box-shadow: 0 0 0 0, 1px 1px 5px inset black;
+            ;
             color: white;
             outline: none;
             border: none;
@@ -58,6 +60,11 @@
             width: 100%;
             position: relative;
             padding-left: 10px;
+            transition: 2s;
+        }
+
+        .search_area>input:focus {
+            box-shadow: 0 0 0 0, 2px 2px 5px inset black, 1px 200px #b8a909 inset;
         }
 
         .search_area>input::placeholder {
@@ -113,7 +120,7 @@
 
         .main_movie_title {
             font-size: 2.6rem;
-            color: #5a155a
+            color: #5a155a;
         }
 
         /*        서브 영화 영역*/
