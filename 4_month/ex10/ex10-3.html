@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.로그인 페이지 만들기</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background: black;
+        }
+
+        .login_container {
+            min-width: 350px;
+            margin: 0 auto;
+        }
+
+        /*배너*/
+        .banner {
+            width: 100%;
+            height: 350px;
+            background-image: url('../../img/moive_banner.jpg');
+            background-position: center;
+            background-size: cover;
+            box-shadow: 1px -30px 15px 20px inset black;
+
+        }
+
+        /*        로그인 타이틀 영역*/
+        .login_title_area {
+            background: #000000;
+            border-bottom: 1px solid #240404;
+            padding: 23px;
+            height: 120px;
+            color: white;
+        }
+
+        .login_title {
+            color: #4c27b3;
+            font-size: 2.7em;
+            padding: 7px;
+            color: #FFFFFF;
+            text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+        }
+
+
+        /*        로그인 폼 영역*/
+        .login_area {
+            justify-content: center;
+            margin: 10px auto;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            max-width: 300px;
+        }
+
+        .login_area>input {
+            margin-top: 0.5rem;
+            padding: 15px;
+            width: 250px;
+            background: transparent;
+            border: none;
+            border-bottom: 1.2px solid gray;
+            outline: none;
+            transition: 2s;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .login_area>input::placeholder {
+            position: absolute;
+            left: 0;
+        }
+
+        .login_area>input:focus {
+            box-shadow: 0 0 0 0, 0 -200px 0 0 gold inset;
+            border-radius: 3px;
+
+        }
+
+        .login_area>input:focus::placeholder {
+            color: black;
+            font-weight: 500;
+        }
+
+        /*        로그인 버튼*/
+
+        .login_btn {
+            padding: 14px;
+            width: 280px;
+            margin: 10px;
+            margin-top: 1.5rem;
+            border-radius: 20px;
+            border: none;
+            background: #1b0d15;
+            color: white;
+            transition: 0.5s;
+        }
+
+        .login_btn:hover {
+            background: gold;
+            color: black;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14.5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login_container">
+        <div class="banner"></div>
+        <div class="login_title_area">
+            <h2 class="login_title">NewFlix</h2>
+            <p class="login_text">새로운 OTT 뉴플릭스 등장! <br>
+                지금 가입하면 무료
+            </p>
+        </div>
+        <div class="login_area">
+            <input type="text" placeholder="ID">
+            <input type="password" placeholder="PASSWORD">
+        </div>
+        <button class="login_btn">접속하기</button>
+
+
+    </div>
+
+</body></html>
