@@ -3,8 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(100deg, rgba(38, 2, 27, 0.922), #000000);
+            color: white;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container {
+            padding-top: 1.5rem;
+            margin: 0 auto;
+            width: 510px;
+            height: 100vh;
+            background: black;
+            box-shadow: 2px 5px 15px gray;
+        }
+
+        /*        검색창 영역*/
+        .search_area {
+            height: 50px;
+            line-height: 2.5;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+
+        .search_area label {
+            position: absolute;
+            color: white;
+            right: 1.8rem;
+            z-index: 100;
+
+
+        }
+
+        .search_area>input {
+            color: white;
+            outline: none;
+            border: none;
+            background: #4a204a;
+            border-radius: 20px;
+            height: 40px;
+            min-width: 150px;
+            max-width: 480px;
+            width: 100%;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .search_area>input::placeholder {
+            padding-left: 10px;
+            color: white;
+        }
+
+
+
+        /*        메인 영화 영역*/
+
+        .movie_play_btn {
+            right: 3rem;
+            padding: 6px 6px 13px 10px;
+            bottom: 4rem;
+            border-radius: 50%;
+            font-size: 3rem;
+            position: absolute;
+            background: rgba(102, 10, 63, 0.941);
+            transition: 0.5s;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .movie_play_btn:hover {
+            transform: scale(1.1)
+        }
+
+        .movie_play_btn>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .main_movie_area {
+            position: relative;
+            height: 300px;
+            border: 1px solid rgba(38, 33, 35, 0.941);
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .main_movie {
+            height: 200px;
+            width: 100%;
+            padding: 0;
+            background: ;
+        }
+
+        .main_movie_etc_text {
+            margin-top: 7px;
+        }
+
+        .main_movie_title {
+            font-size: 2.6rem;
+            color: #5a155a
+        }
+
+        /*        서브 영화 영역*/
+        .sub_movie_area {
+            border: 1px solid rgba(38, 33, 35, 0.941);
+            border-radius: 5px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .sub_movie_area p {
+            padding-top: 8px;
+        }
+
+        .sub_movie_area p>a {
+            text-decoration: none;
+            margin-top: 10px;
+            color: white;
+            padding: 10px;
+        }
+
+        .sub_movie_area ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sub_movie_area ul li {
+            list-style: none;
+            margin: 10px;
+            border-radius: 10px;
+            width: 220px;
+            height: 250px;
+            cursor: pointer;
+            transition: 0.5s
+        }
+
+        .sub_movie_area ul li:hover {
+            transform: scale(1.05);
+        }
+
+        .movie_poster1 {
+            background-image: url("../../img/movie1.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .movie_poster2 {
+            background-image: url("../../img/movie2.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        /*        네비게이션 바 영역*/
+        .navi_bar {
+            background: rgba(109, 109, 120, 0.431);
+            margin: 10px;
+            width: 100px;
+            height: 45px;
+            line-height: 2.2;
+            position: fixed;
+            transform: translateX(-50%);
+            left: 50%;
+            bottom: 0.7rem;
+            cursor: pointer;
+        }
+
+        .navi_bar:hover {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .navi_bar:hover>span {
+            color: white;
+        }
+
+        .navi_bar span {
+            font-size: 20px;
+            font-weight: 600;
+            color: black;
+            padding: 10px;
+            margin-left: 3px;
+        }
+
+        .navi_bar span:hover {
+            color: goldenrod;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/80da291c3f.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
-</body>
-</html>
+    <section class="container">
+        <div class="search_area">
+            <label for="search" class="search_label">
+                <i class="fa-solid fa-magnifying-glass"></i></label>
+            <input type="search" id="search" placeholder="검색하기" class="search_input">
+        </div>
+        <div class="main_movie_area">
+            <span class="movie_play_btn"><a href="https://www.youtube.com/watch?v=2yfo6oWdOF0">▶</a></span>
+            <video preload="auto" class="main_movie" width="300px" height="300px" src="../../img/video.mp4"></video>
+            <p class="main_movie_etc_text">지금 가장 흥행하는 작품은?</p>
+            <h1 class="main_movie_title">승리호</h1>
+        </div>
+        <div class="sub_movie_area">
+            <p><a href="https://movie.daum.net/main">다른 작품 보기></a></p>
+            <ul>
+                <li class="movie_poster1"></li>
+                <li class="movie_poster2"></li>
+            </ul>
+        </div>
+        <div class="navi_bar">
+            <span> <i class="fa-solid fa-magnifying-glass"></i></span>
+            <span><i class="fa-regular fa-user"></i></span>
+        </div>
+    </section>
+
+</body></html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>3.로그인 페이지 만들기</title>
@@ -116,7 +117,7 @@
 
 <body>
 
-    <div class="login_container">
+    <form class="login_container" action="#">
         <div class="banner"></div>
         <div class="login_title_area">
             <h2 class="login_title">NewFlix</h2>
@@ -125,12 +126,12 @@
             </p>
         </div>
         <div class="login_area">
-            <input type="text" placeholder="ID">
-            <input type="password" placeholder="PASSWORD">
+            <input type="text" placeholder="ID" required pattern="[a-zA-Z]{2,8}[0-9]{2,4}">
+            <input type="password" placeholder="PASSWORD" required pattern="[a-zA-Z]{6,12}[0-9]{2,4}(!@#$%%^&*()){1,3}">
         </div>
-        <button class="login_btn">접속하기</button>
+        <button type="submit" class="login_btn">접속하기</button>
 
 
-    </div>
+    </form>
 
 </body></html>
