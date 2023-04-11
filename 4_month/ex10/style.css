@@ -16,6 +16,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: 1s appear 1 ease-in-out;
+}
+
+
+@keyframes appear {
+    from {
+        opacity: 0
+    }
 }
 
 .hamburger-title {
@@ -36,15 +44,15 @@ body {
 .hamburger-container:hover + div {
     opacity: 1;
     transform: translateY(20px);
-    color:white;
-/*    transition: 1s;*/
+    color: white;
+    /*    transition: 1s;*/
 }
 
-.hamburger-container+div {
+.hamburger-container + div {
     opacity: 0;
     transition: 1s;
     transform: rotateX(120deg) rotateY(240deg) perspective(600px);
-    
+
 }
 
 .hamburger,

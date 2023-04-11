@@ -13,9 +13,17 @@
         body {
             width: 100%;
             height: 100%;
-            background: black;
+            background: #000000;
             overflow-x: hidden;
             z-index: -2;
+            animation: 1s appear 1 ease-in-out;
+        }
+
+
+        @keyframes appear {
+            from {
+                opacity: 0
+            }
         }
 
         body::-webkit-scrollbar {
@@ -239,7 +247,8 @@
 
         .like_item_box:hover {
             cursor: pointer;
-            transform: scale(1.01)
+            transform: scale(1.01);
+            box-shadow: 0 0 0 0, 600px 50px 0 0 #bf0654 inset, -600px -50px 0 0 gold inset
         }
 
         /* 찜한 목록 이미지*/
@@ -339,7 +348,6 @@
 </head>
 
 <body>
-
     <div class="mypage_container">
         <div class="mypage_profile">
             <div class="profile">
