@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>마이 페이지 만들기</title>
+    <script src="https://kit.fontawesome.com/80da291c3f.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background: black;
+            overflow-x: hidden;
+            z-index: -2;
+        }
+
+        body::-webkit-scrollbar {
+            background: black;
+            width: 9px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            height: 3px;
+            background: gray;
+            border-radius: 10px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background: black;
+
+        }
+
+
+
+        /*        마이페이지 컨테이너*/
+        .mypage_container {
+            height: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: transparent;
+            box-shadow: 2px 15px 15px black;
+            ;
+        }
+
+        /* ---------------프로필 영역----------------------*/
+        .mypage_profile {
+            background: rgba(249, 249, 249, 0.234);
+            height: 150px;
+            border-radius: 5px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+            color: white;
+            box-shadow: 2px 5px 10px 3px black inset;
+
+
+        }
+
+        .mypage_profile>div {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin: 1rem;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        .mypage_profile>div:hover {
+            transform: scale(1.05)
+        }
+
+        /*        기존 프로필*/
+        .profile {
+            box-shadow: 1px 1px 2px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-image: url('../../img/profile.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        /*        프로필 이름*/
+        .profile>span {
+            position: absolute;
+            bottom: -1.8rem;
+        }
+
+
+
+        /*        새 프로필*/
+
+        .new_profile {
+            box-shadow: 1px 1px 2px black;
+            background: gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .profile_addbtn {
+            font-size: 20px;
+        }
+
+        .new_profile>span {
+            position: absolute;
+            bottom: -1.8rem;
+        }
+
+
+
+        /*-----------------이어보기 영역-------------------*/
+        .mypage_movie_play {
+            background: rgba(249, 249, 249, 0.212);
+            box-shadow: 2px 5px 10px 3px black inset;
+            margin-top: 1rem;
+            height: 300px;
+            width: 100%;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .movie_list {
+            display: flex;
+            padding: 5px;
+            overflow-x: auto;
+        }
+
+        .movie_list::-webkit-scrollbar {
+            background: black;
+        }
+
+        .movie_list::-webkit-scrollbar-thumb {
+            height: 3px;
+            background: gray;
+            border-radius: 10px;
+        }
+
+        .movie_list::-webkit-scrollbar-track {
+            background: black;
+
+        }
+
+        .movie_list>li {
+            transition: 1s;
+            cursor: pointer;
+            list-style: none;
+            margin: 5px;
+            width: 300px;
+            min-width: 330px;
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #000000;
+            color: white;
+            box-shadow: 2px 2px 5px rgba(145, 145, 145, 0.781)
+        }
+
+
+        .movie_list>li:hover {
+            transform: scale(1.03);
+        }
+
+        .movie_image {
+            width: 95%;
+            margin: 5px;
+            height: 80%;
+            background-image: url('../../img/fox.png');
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+        }
+
+        .image1 {
+            background-image: url('../../img/poster1.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .image2 {
+            background-image: url('../../img/poster2.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .image3 {
+            background-image: url('../../img/poster3.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .image4 {
+            background-image: url('../../img/poster4.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .moive_title {
+            height: 20%;
+        }
+
+        /*-----------------내가 찜한 영역-------------------*/
+        .mypage_like_items {
+            height: 100%;
+            background: rgba(249, 249, 249, 0.174);
+            width: 100%;
+            color: white;
+            box-shadow: 2px 5px 10px 3px black inset;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        /*        각 아이템 박스*/
+        .like_item_box {
+            color: white;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            height: 100px;
+            position: relative;
+            background: #0c0c0c;
+
+            transition: 0.5s
+        }
+
+        .like_item_box:hover {
+            cursor: pointer;
+            transform: scale(1.01)
+        }
+
+        /* 찜한 목록 이미지*/
+        .item_image {
+            background-image: url('../../img/fox.png');
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            max-width: 100px;
+            border-radius: 20px;
+        }
+
+        .item_image.a {
+            background-image: url('../../img/poster5.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .item_image.b {
+            background-image: url('../../img/poster6.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .item_image.c {
+            background-image: url('../../img/poster7.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        /*  찜한 목록 제목/출연자 이름*/
+        .item_content {
+            margin-left: 15px;
+
+        }
+
+        /*        찜한 목록 재생 버튼*/
+        .item_playbtn {
+            position: absolute;
+            right: 2rem;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background: rgba(66, 66, 66, 0.849);
+            z-index: 100;
+            transition: 0.5s;
+        }
+
+        .item_playbtn:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .item_playbtn>span {
+            position: absolute;
+            z-index: -1;
+            left: 55%;
+            top: 43%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: white;
+        }
+
+
+
+        /*-----------------네비 영역-------------------*/
+        .mypage_navi_bar {
+            color: white;
+            height: 50px;
+            width: 130px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            bottom: 1.7rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(49, 42, 42, 0.822)
+        }
+
+        .mypage_navi_bar:hover {
+            background: rgba(255, 255, 255, 0.586);
+        }
+
+        .mypage_navi_bar>span {
+            margin: 15px;
+            z-index: 100;
+            cursor: pointer;
+        }
+
+        .mypage_navi_bar>span:hover {
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mypage_container">
+        <div class="mypage_profile">
+            <div class="profile">
+                <div class="profile_image"></div>
+                <span class="profile_name">김땡땡</span>
+            </div>
+            <div class="new_profile">
+                <div class="profile_addbtn">+</div>
+                <span>새 프로필</span>
+            </div>
+        </div>
+
+        <div class="mypage_movie_play">
+            <p style="padding:15px">이어보기</p>
+            <ul class="movie_list">
+                <li>
+                    <div class="movie_image image1"></div>
+                    <p class="movie_title">센과 히치로의 행방불명</p>
+                </li>
+                <li>
+                    <div class="movie_image image2"></div>
+                    <p class="movie_title">아이언맨3/전설의주먹</p>
+                </li>
+                <li>
+                    <div class="movie_image image3"></div>
+                    <p class="movie_title">아바타2</p>
+                </li>
+                <li>
+                    <div class="movie_image image4"></div>
+                    <p class="movie_title">명량</p>
+                </li>
+            </ul>
+        </div>
+        <div class="mypage_like_items">
+            <p style="padding:15px;">내가 찜한 목록</p>
+            <div class="like_item_box">
+                <div class="item_image a"></div>
+                <div class="item_content">
+                    <h4>도깨비</h4>
+                    <span>김고은, 공유 출연</span>
+                </div>
+                <div class="item_playbtn">
+                    <span>▶</span>
+                </div>
+            </div>
+            <div class="like_item_box">
+                <div class="item_image b"></div>
+                <div class="item_content">
+                    <h4>오만과 편견</h4>
+                    <span>황상준 출연</span>
+                </div>
+                <div class="item_playbtn">
+                    <span>▶</span>
+                </div>
+            </div>
+            <div class="like_item_box">
+                <div class="item_image c"></div>
+                <div class="item_content">
+                    <h4>편의점 샛별이</h4>
+                    <span>지창욱, 김유정 출연</span>
+                </div>
+                <div class="item_playbtn">
+                    <span>▶</span>
+                </div>
+            </div>
+        </div>
+        <div class="mypage_navi_bar">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span>
+            <span><i class="fa-solid fa-user"></i></span>
+        </div>
+    </div>
+
+</body></html>
