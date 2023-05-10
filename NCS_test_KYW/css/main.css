@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+@keyframes appear {
+    from {
+        transform: scale(0.8);
+        opacity: 0
+    }
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    animation: 1s appear 1
+}
+
+/*        헤더 영역*/
+header {
+    min-height: 90px;
+    background: #5ab1dc;
+    box-shadow: 1px 1px 5px;
+    border-radius: 15px;
+    margin: 5px 5px;
+    min-width: 510px;
+}
+
+/*        메인 영역*/
+.main {
+    display: flex;
+    min-height: 645px;
+
+
+}
+
+/*---네비 영역*/
+.main > nav {
+    width: 20%;
+    background: #5ab1dc;
+    box-shadow: 1px 1px 5px;
+    border-radius: 10px;
+    margin: 0 5px;
+    min-width: 150px;
+}
+
+.main > nav > ul > li > a {
+    color: black;
+}
+
+.main > nav > ul > li > a:hover {
+    color: mediumvioletred;
+}
+
+
+/*---콘텐츠 영역*/
+.main > article {
+    background: #5ab1dc;
+    width: 80%;
+    box-shadow: 1px 1px 5px;
+    border-radius: 10px;
+    margin-right: 5px;
+    position: relative;
+    min-width: 360px;
+}
+
+.main > article > table {
+    border-collapse: collapse;
+    height: 140px;
+    min-width: 370px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    box-shadow: 7px 10px 10px black;
+    ;
+}
+
+table th {
+    border: 1px solid white;
+}
+
+table td {
+    border: 1px solid white;
+}
+
+table tr td:first-child {
+    text-align: center;
+}
+
+/*        풋터 영역*/
+footer {
+    min-width: 510px;
+    min-height: 90px;
+    box-shadow: 1px 1px 5px;
+    background: #5ab1dc;
+    border-radius: 15px;
+    margin: 5px 5px;
+    padding: 5px;
+
+}

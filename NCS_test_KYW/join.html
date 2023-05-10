@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/join.css">
+</head>
+
+<body>
+
+    <div class="join_container">
+        <form action="./done.html">
+            <h3 class="join_title">회원가입</h3>
+
+            <label for="username">아이디</label>
+            <input type="text" id="username" required pattern="[a-zA-Z]{2,6}[0-9]{2,5}"><br>
+
+            <label for="password">비밀번호</label>
+            <input type="text" id="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" placeholder="최소6자 이상(숫자 포함)"><br>
+
+            <label for="ps_confirm">비밀번호 확인</label>
+            <input type="text" id="ps_confirm" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"><br>
+
+            <label for="birsday">생년월일</label>
+            <input type="text" id="birsday"><br>
+
+            <label for="name">이름</label>
+            <input type="text" id="name" required minLength=3><br>
+
+            <label for="phone">전화번호</label>
+            <input type="text" id="phone" required pattern="^\d{2,3}-?\d{3,4}-?\d{4}$" placeholder="000-0000-0000"><br>
+            <div class="join_btn_box">
+                <button type="submit">회원가입</button>
+                <button>정보수정</button>
+            </div>
+        </form>
+
+    </div>
+
+</body></html>
